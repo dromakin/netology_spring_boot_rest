@@ -26,7 +26,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/")
 public class AuthorizationController {
-    AuthorizationService service;
+    private final AuthorizationService service;
 
     public AuthorizationController(AuthorizationService service) {
         this.service = service;
