@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "9604a398-2cfb-4808-9084-3319d36ace54",
+		"name": "Netology Web",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9165319"
+	},
+	"item": [
+		{
+			"name": "spring-boot-rest",
+			"item": [
+				{
+					"name": "get (401)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/authorize?user=User 42&password=12345678",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authorize"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "User 42"
+								},
+								{
+									"key": "password",
+									"value": "12345678"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get (200)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/authorize?user=caleb.torphy&password=pscipvxx6i",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authorize"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "caleb.torphy"
+								},
+								{
+									"key": "password",
+									"value": "pscipvxx6i"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get (400)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/authorize?user=caleb.torphy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authorize"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "caleb.torphy"
+								},
+								{
+									"key": "password",
+									"value": "pscipvxx6i",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get (400) Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/authorize?user=caleb.torphy&password=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authorize"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "caleb.torphy"
+								},
+								{
+									"key": "password",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
