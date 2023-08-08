@@ -13,6 +13,7 @@
 package com.dromakin.netology_spring_boot_rest.services;
 
 import com.dromakin.netology_spring_boot_rest.entities.Authorities;
+import com.dromakin.netology_spring_boot_rest.entities.User;
 import com.dromakin.netology_spring_boot_rest.exceptions.InvalidCredentials;
 import com.dromakin.netology_spring_boot_rest.exceptions.UnauthorizedUser;
 import com.dromakin.netology_spring_boot_rest.repositories.UserRepository;
@@ -37,6 +38,10 @@ public class AuthorizationService {
             throw new UnauthorizedUser("Unknown user " + user);
         }
         return userAuthorities;
+    }
+
+    public List<Authorities> getAuthorities(User user) {
+        return getAuthorities(user.getLogin(), user.getPassword());
     }
 
     private boolean isEmpty(String str) {

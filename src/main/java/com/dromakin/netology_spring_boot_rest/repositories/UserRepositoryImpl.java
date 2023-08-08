@@ -35,7 +35,7 @@ public class UserRepositoryImpl implements UserRepository {
         for (int i = 0; i < 50; i++) {
             String name = faker.name().username();
             String password = faker.internet().password();
-            int randomNum = random.nextInt(3 - 1) + 1;
+            int randomNum = random.nextInt(4 - 1) + 1;
             List<Authorities> userAuthorities = new ArrayList<>();
 
             if (randomNum == 1) {
@@ -55,7 +55,7 @@ public class UserRepositoryImpl implements UserRepository {
                     .userAuthorities(userAuthorities)
                     .build();
 
-            System.out.printf("Name:password %s:%s%n", name, password);
+            System.out.printf("Name:password:userAuthorities %s:%s:%s\n", name, password, userAuthorities.size());
             users.put(name, user);
         }
     }

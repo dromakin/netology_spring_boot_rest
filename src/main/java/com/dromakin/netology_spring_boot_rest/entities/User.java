@@ -28,6 +28,7 @@ public class User {
     @Size(min = 2, max = 100)
     String login;
     @NotBlank
+    @Size(min = 6, max = 100)
     String password;
     List<Authorities> userAuthorities;
 }

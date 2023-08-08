@@ -39,12 +39,42 @@
 					"response": []
 				},
 				{
+					"name": "get (200) old",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/old/authorize?user=darleen.buckridge&password=flbgbekf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"old",
+								"authorize"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "darleen.buckridge"
+								},
+								{
+									"key": "password",
+									"value": "flbgbekf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "get (200)",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/authorize?user=caleb.torphy&password=pscipvxx6i",
+							"raw": "http://localhost:8080/authorize?login=darleen.buckridge&password=flbgbekf",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -55,12 +85,12 @@
 							],
 							"query": [
 								{
-									"key": "user",
-									"value": "caleb.torphy"
+									"key": "login",
+									"value": "darleen.buckridge"
 								},
 								{
 									"key": "password",
-									"value": "pscipvxx6i"
+									"value": "flbgbekf"
 								}
 							]
 						}
